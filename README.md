@@ -1,2 +1,37 @@
-# NLP_Text-classification
-# Disaster Response Pipeline Project File Structure app | - template | |- master.html # main page of web app | |- go.html # classification result page of web app |- run.py # Flask file that runs app  data |- disaster_categories.csv # data to process |- disaster_messages.csv # data to process |- process_data.py |- CleanDatabase.db # database to save clean data to  models |- train_classifier.py |- cv_AdaBoostr.pkl # saved model  README.md  ### Instructions to run: 1. Run the following commands in the project's root directory to set up your database and model.      - To run ETL pipeline that cleans data and stores in database         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`     - To run ML pipeline that trains classifier and saves         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`  2. Run the following command in the app's directory to run your web app.     `python run.py`  3. Go to https://view6914b2f4-3001.udacity-student-workspaces.com/
+# This web app classifiies text message into 36 types of disasters. Please follow the steps to install and open the webapp. You can input your messages and it will tell you which type of disaster it belongs to with necessary interactive plots. Enjoy!
+
+# 1. Installation
+nltk(3.3)
+scikit-learn(0.19.1)
+plotly(3.3.0)
+The code should run with no issues using Python versions 3.*.
+
+# 2. Project Motivation
+Create a machine learning pipeline to categorize these events so that users can send the messages to an appropriate disaster relief agency.
+
+# 3. File Descriptions
+data/disaster_messages.csv data/disaster_categories.csv : original data
+data/process_data.py: to run ETL pipeline that cleans data and stores in database
+data/DisasterResponse.db: database that stores cleaned data
+models/train_classifier.py: to run ML pipeline that trains classifier and saves
+models/classifier.pkl: a pickle file which saves model
+data/: a Flask framework for presenting data
+
+# 4. Results
+The web app shows visualizations about data.
+The web app can use the trained model to input text and return classification results
+
+# 5. How to run the web app?
+Before run the web app:
+
+Run the following commands in the project's root directory to set up your database and model.
+
+To run ETL pipeline that cleans data and stores in database ```python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
+To run ML pipeline that trains classifier and saves python ```models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
+Run the following command in the app's directory to run the web app.
+
+```python run.py```
+```env|grep WORK```
+Then go to ```https://SPACEID-3001.SPACEDOMAIN```
+
+Enjoy!
