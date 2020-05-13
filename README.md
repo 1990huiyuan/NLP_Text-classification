@@ -1,4 +1,4 @@
-# This web app classifiies text message into 36 types of disasters. Please follow the steps to install and open the webapp. You can input your messages and it will tell you which type of disaster it belongs to with necessary interactive plots. Enjoy!
+This web app classifiies text message into 36 types of disasters. Please follow the steps to install and open the webapp. You can input your messages and it will tell you which type of disaster it belongs to with necessary interactive plots. Enjoy!
 
 # 1. Installation
 nltk(3.3)
